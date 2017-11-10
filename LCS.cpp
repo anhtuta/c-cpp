@@ -5,11 +5,9 @@
 #define MAX 10000
 
 using namespace std;
-//char x[MAX];
-//char y[MAX];
 string x, y;
 int T, n, m;
-int s[MAX][MAX];	//s[i][j] laf ddooj daif dayx con chung daif nhaat cuar "i phan twr ddaauf tieen cuar x" vaf "j phan twr ddaauf tieen cuar y"
+//int s[MAX][MAX];	//s[i][j] laf ddooj daif dayx con chung daif nhaat cuar "i phan twr ddaauf tieen cuar x" vaf "j phan twr ddaauf tieen cuar y"
 //Chir caanf timf s[n][m] laf xong
 
 void output() {
@@ -36,6 +34,7 @@ int main() {
 		cin >> y;
 		n = x.size();
 		m = y.size();
+		int s[n+1][m+1];
 		
 		for(int i = 0; i <= n; i++) {
 			s[i][0] = 0;		//khi xaau y roongx
