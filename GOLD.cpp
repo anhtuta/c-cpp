@@ -18,6 +18,7 @@ int main() {
 	cin >> n >> L1 >> L2;
 	for(int i = 1; i <= n; i++) {
 		cin >> a[i];
+		s[i] = 0;
 	}
 	
 	if(n == 1) {
@@ -38,7 +39,7 @@ int main() {
 		}
 		
 		s[i] = a[i] + maxSu;
-		cout << "s["<<i<<"] = "<<s[i]<<endl;
+		//cout << "s["<<i<<"] = "<<s[i]<<endl;
 		if(maxGold < s[i]) maxGold = s[i];
 	}
 	

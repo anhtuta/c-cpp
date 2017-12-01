@@ -57,18 +57,8 @@ void sort() {
 int dp(int i) {
 	maxH[i] = a[i].z;
 	for(int j = 1; j <= i - 1; j++) {
-		// if(ai < aj) (so sanh theo dien tich day)
 		if((a[i].x < a[j].x && a[i].y < a[j].y) || (a[i].x < a[j].y && a[i].y < a[j].x)) {
-			cout << "maxH[" << i << "] = " <<maxH[i] << ", a["<<i<<"].z + maxH[" << i << "] = " << a[i].z + maxH[j] << endl;
-//			if(maxH[i] > a[i].z + maxH[j]) {
-//				cout << "i = " << i <<", ai.z = " << a[i].z << ", maxHi = " << maxH[i] << ": Lon hon\n";
-//				cout << "maxHi = [";
-//				for(int k = 1; k <= i; k++) cout << maxH[k] << " ";
-//				cout << "]; ai.z + maxHj = " <<a[i].z + maxH[j] <<endl;
-//			} //else cout << "\tNho hon\n";
-			
 			maxH[i] = max(maxH[i], a[i].z + maxH[j]);
-			//maxH[i] = a[i].z + maxH[j];	Neu dung ntnay la sai!
 		}
 	}
 	return maxH[i];

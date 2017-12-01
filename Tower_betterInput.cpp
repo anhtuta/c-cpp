@@ -6,6 +6,7 @@
 
 using namespace std;
 
+// cach giai nay toois wu hown phaanf dddocj input. VD: neeu vieen gachj laf hinhf laapj phuong x*x*x thif ko caanf taoj theem 2 vieen gachj nwax
 int n;
 
 typedef struct {
@@ -74,11 +75,11 @@ bool checkBlock(block &a, block &b) {
 	return false;
 }
 
-//tim chieu cao lon nhat cua tower ma co dinh la vien gach i
+//tim dpi = chieu cao lon nhat cua tower ma co dinh la vien gach i
 int dp(int i) {
-	maxH[i] = a[i].z;
+	maxH[i] = a[i].z;	// khoi tao dpi = chieu cao cua vien gach thu i
 	for(int j = 1; j < i; j++) {
-		if(checkBlock(a[i], a[j])) {
+		if(checkBlock(a[i], a[j])) {	//if(ai < aj), so sanh theo dien tich day
 			maxH[i] = max(maxH[i], a[i].z + maxH[j]);
 		}
 	}
@@ -91,7 +92,6 @@ int main() {
 	while(1) {
 		input();
 		sort();
-		//output();
 		int maxTower = 0;
 		for(int i = 1; i <= n; i++) {
 			maxTower = max(maxTower, dp(i));	//maxTower la gia tri lon nhat trong day dp(i)
