@@ -82,7 +82,7 @@ bool checkMarks() {
 	return true;
 }
 
-int abc = 0;	//abc = 1000 nghĩa là giải xong! Có thể thay = biến: bool flag = false. flag = true là OK. Nhưng ko hiểu sao t dùng flag lại lỗi!
+int abc = 0;
 void sudoku(int k1, int k2) {	//ddieenf soos vaof oo (k1, k2)
 	if(k1 >= 9) {
 		abc = 1000;
@@ -114,7 +114,7 @@ void sudoku(int k1, int k2) {	//ddieenf soos vaof oo (k1, k2)
 }
 
 int main() {
-	freopen("sudoku.txt", "r", stdin);
+	//freopen("sudoku.txt", "r", stdin);
 	cin >> testcase;
 	int currentTest = 0;
 	while(testcase--) {

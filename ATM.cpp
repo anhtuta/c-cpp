@@ -47,7 +47,7 @@ int main() {
 		for(int i = 0; i <= c; i++) {
 			numCoin += numberCoin[x[i]];
 			if(i == c) {
-				if(sum > 0 && (x[i] == 1 || x[i] == 4)) numWay *= numberWay[x[i]] + 1;
+				if(sum > 0 && (x[i] == 1 || x[i] == 4)) numWay *= numberWay[x[i]] + 1;	// numWay = numWay*(numberWay[x[i]] + 1)
 				else numWay *= numberWay[x[i]];
 			} else {
 				numWay *= numberWay[x[i]];
