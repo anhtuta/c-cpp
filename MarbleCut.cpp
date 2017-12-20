@@ -2,6 +2,8 @@
 #include<iostream>
 
 using namespace std;
+
+// BÀI NÀY CỦA Long Nguyễn LÀM
 #define MAX 600
 int w[201], h[201];
 int S[601][601];

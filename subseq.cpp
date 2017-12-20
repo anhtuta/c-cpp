@@ -14,7 +14,14 @@ VD: input:
 output:
 7
 
-Có 7 dãy con TMĐK: tổng <= 5
+Có 7 dãy con TMĐK: tổng <= 5, đó là:
+2
+3
+4
+1
+5
+2 3
+4 1
 */
 using namespace std;
 
@@ -30,12 +37,12 @@ void input() {
 	}
 }
 
-void output() {
-	for (int i = 1; i <= n; ++i)
-	{
-		cout << a[i] << " ";
-	}
-}
+// void output() {
+// 	for (int i = 1; i <= n; ++i)
+// 	{
+// 		cout << a[i] << " ";
+// 	}
+// }
 
 int main() {
 	freopen("subseq.txt", "r", stdin);
