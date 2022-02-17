@@ -47,6 +47,21 @@ void DFS(int u) {
 	///cout << "\tDuyet " << u << endl;		//u.color = black
 }
 
+void printNumLow() {
+	cout << "print num:\n";
+	for (int i = 1; i <= n; ++i)
+	{
+		cout << num[i] << " ";
+	}
+	cout << endl;
+	cout << "print low:\n";
+	for (int i = 1; i <= n; ++i)
+	{
+		cout << low[i] << " ";
+	}
+	cout << endl;
+}
+
 int main() {
 	freopen("bridge.txt", "r", stdin);
 	input();
@@ -59,4 +74,6 @@ int main() {
 	{
 		cout << res[i].first << " " << res[i].second << endl;
 	}
+
+	printNumLow();
 }
